@@ -25,12 +25,12 @@ int main(int argc, char **argv)
 
     FILE *in = fopen(argv[1],"r");
     if(in==NULL) {
-        fprintf (stderr, "Blad przy otwieraniu pliku: %s", argv[1]); return 1;
+        fprintf (stderr, "Blad przy otwieraniu pliku: %s\n", argv[1]); return 1;
         }
 
     FILE *out = fopen(argv[2],"w");
     if(out==NULL) {
-        fprintf (stderr, "Blad przy otwieraniu pliku: %s", argv[2]); return 1;
+        fprintf (stderr, "Blad przy otwieraniu pliku: %s\n", argv[2]); return 1;
         }
     if(read_ref(in,&x,&y)==1)
         return 1;
@@ -45,7 +45,7 @@ int main(int argc, char **argv)
         return 1;
     if(life(t,argv[4],atoi(argv[3]))==1)
     {
-        printf("Koniec programu");
+        printf("Koniec programu\n");
         return 1;
     }
     save_grid(out,t);
