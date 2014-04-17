@@ -1,4 +1,6 @@
 #include "generator.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 int life(life_t t,char *name,int n)
 {
